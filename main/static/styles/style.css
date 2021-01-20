@@ -30,7 +30,7 @@ main{
     grid-gap: 40px;
 }
 .item{
-	height: 200px;
+	height: 170px;
 	border-radius: 10px;
 	padding: 30px 50px;
 	display: flex;
@@ -48,7 +48,7 @@ main{
 	justify-content: space-between;
 }
 .book_title{
-	font-size: 48px;
+	font-size: 40px;
 }
 .book_genre{
 	font-size: 22px;
@@ -71,4 +71,32 @@ footer{
 footer p{
 	color: #fff;
 	text-align: center;
+}
+
+.add_block{
+	width: 50%;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+.add_block form{
+	display: flex;
+	flex-direction: column;
+}
+.add_block label{
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+.add_block input{
+	height: 30px;
+	margin-bottom: 20px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	font-size: 20px;
+}
+.add_block button{
+	height: 40px;
+	border: 2px solid rgb(54, 54, 54);
+	border-radius: 10px;
+	font-size: 20px;
+	background-color: rgb(123, 241, 123);
 }

@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import book_page
+from main.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', book_page),
+    path('add-book/', add_book, name="add-book"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
