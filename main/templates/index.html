@@ -14,13 +14,15 @@
 	<main>
 		<div class="title">Book List</div>
 		<div class="content_block">
+			{% for book in book_list %}
 			<div class="item">
 				<div class="text">
-					<div class="book_title">Title</div>
-					<div class="book_genre">Genre:</div>
+					<div class="book_title">{{ book.title }}</div>
+					<div class="book_genre">Жанр: {{ book.genre }}</div>
 				</div>
-				<div class="book_price">Price: <span>200$</span></div>
+				<div class="book_price">Цена: <span>{{ book.price}}c</span></div>
 			</div>
+			{% endfor %}
 		</div>
 	</main>
 	<footer>
