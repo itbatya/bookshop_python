@@ -5,6 +5,9 @@ def book_page(request):
     book_list = Book.objects.all()
     return render(request, "index.html", {"book_list" : book_list})
 
+def main_page(request):
+    return redirect(book_page)
+
 def add_page(request):
     return render(request, "addbook.html")
 
@@ -21,4 +24,4 @@ def add_book(request):
     
     book.save()
     
-    return redirect(book_page)
+    return redirect(add_page)

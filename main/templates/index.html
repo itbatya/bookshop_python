@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %}">
 	<title>Books</title>
 </head>
 <body>
@@ -13,8 +13,8 @@
 			<h1>Book Shop</h1>
 			<nav>
 				<ul class="navigation">
-					<li><a href="">Главная</a></li>
-					<li id="add_btn"><a href="">Добавить книгу</a></li>
+					<li><a href="{% url 'main-page' %}">Главная</a></li>
+					<li id="add_btn"><a href="{% url 'add-page' %}">Добавить книгу</a></li>
 				</ul>
 			</nav>
 		</div>
