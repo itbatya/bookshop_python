@@ -5,6 +5,8 @@ def book_page(request):
     book_list = Book.objects.all()
     return render(request, "index.html", {"book_list" : book_list})
 
+def add_page(request):
+    return render(request, "addbook.html")
 
 def add_book(request):
     data = request.POST

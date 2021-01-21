@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/addbook.css' %}">
+	<title>Books</title>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<h1>Book Shop</h1>
+			<nav>
+				<ul class="navigation">
+					<li><a href="">Главная</a></li>
+					<li id="add_btn"><a href="">Добавить книгу</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div class="add_block">
+			<form action="{% url 'add-book' %}" method="POST">
+				{% csrf_token %}
+				<label for="title">Название</label>
+				<input type="text" id="title" name="title">
+				<label for="subtitle">Подзаголовок</label>
+				<input type="text" id="subtitle" name="subtitle">
+				<label for="description">Описание</label>
+				<input type="text" id="description" name="description">
+				<label for="price">Цена</label>
+				<input type="text" id="price" name="price">
+				<label for="genre">Жанр</label>
+				<input type="text" id="genre" name="genre">
+				<label for="author">Автор</label>
+				<input type="text" id="author" name="author">
+				<label for="year">Год выхода книги</label>
+				<input type="text" id="year" name="year">
+				<button>Добавить книгу</button>
+			</form>
+		</div>
+	</main>
+	<footer>
+		<p>Python Django</p>
+	</footer>
+</body>
+</html>
