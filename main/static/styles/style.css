@@ -92,6 +92,7 @@ footer p{
 	border: 1px solid gray;
 	border-radius: 5px;
 	font-size: 20px;
+	padding-left: 10px;
 }
 .add_block button{
 	height: 40px;
