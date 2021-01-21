@@ -28,7 +28,13 @@
 					<div class="book_title">{{ book.title }}</div>
 					<div class="book_genre">Жанр: {{ book.genre }}</div>
 				</div>
-				<div class="book_price">Цена: <span>{{ book.price}}c</span></div>
+				<div class="price_icons">
+					<div class="book_price">Цена: <span>{{ book.price}}c</span></div>
+					<div class="icons">
+						<img src="{% static 'icons/unmarked.png' %}" alt="">
+						<img src="{% static 'icons/remove.png' %}" alt="">
+					</div>
+				</div>
 			</div>
 			{% endfor %}
 		</div>

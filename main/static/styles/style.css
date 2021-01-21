@@ -67,6 +67,11 @@ main{
 	box-shadow: 1px 1px 13px 1px gray;
 	transition: all 1s;
 }
+
+.item.marked{
+	box-shadow: 1px 1px 17px 1px rgb(161, 3, 3);
+}
+
 .item:hover{
 	background-color: #E6E6E6;
 }
@@ -74,6 +79,20 @@ main{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+.price_icons{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.icons{
+	display: flex;
+	justify-content: flex-end;
+}
+.icons img{
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
 }
 .book_title{
 	font-weight: 600;
