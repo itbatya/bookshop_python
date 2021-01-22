@@ -9,4 +9,4 @@ class Book(models.Model):
     author = models.CharField(max_length=50)
     year = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True)
-
+    is_favorite = models.BooleanField(default=False)

@@ -25,3 +25,9 @@ def add_book(request):
     book.save()
     
     return redirect(add_page)
+
+def delete_book(request, id):
+    book = Book.objects.get(id=id)
+    book.delete()
+    return redirect(book_page)
+
