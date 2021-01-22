@@ -31,3 +31,14 @@ def delete_book(request, id):
     book.delete()
     return redirect(book_page)
 
+def mark_book(request, id):
+    book = Book.objects.get(id=id)
+    book.is_favorite = True
+    book.save()
+    return redirect(book_page)
+
+def unmark_book(request, id):
+    book = Book.objects.get(id=id)
+    book.is_favorite = False
+    book.save()
+    return redirect(book_page)

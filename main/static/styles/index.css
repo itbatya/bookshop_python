@@ -69,12 +69,9 @@ main{
 }
 
 .item.marked{
-	box-shadow: 1px 1px 17px 1px rgb(161, 3, 3);
+	background-color:  #ffd2dd;
 }
 
-.item:hover{
-	background-color: #E6E6E6;
-}
 .text{
 	display: flex;
 	flex-direction: column;

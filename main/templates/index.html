@@ -23,7 +23,11 @@
 		<div class="title">Book List</div>
 		<div class="content_block">
 			{% for book in book_list %}
-			<div class="item">
+			<div class="item
+				{% if book.is_favorite %}
+					marked
+				{% endif %}
+			">
 				<div class="text">
 					<div class="book_title">{{ book.title }}</div>
 					<div class="book_genre">Жанр: {{ book.genre }}</div>
@@ -31,9 +35,15 @@
 				<div class="price_icons">
 					<div class="book_price">Цена: <span>{{ book.price}}c</span></div>
 					<div class="icons">
-						<a href="">
+						{% if book.is_favorite %}
+						<a href="{% url 'unmark-book' book.id %}">
+							<img src="{% static 'icons/marked.png' %}" alt="">
+						</a>
+						{% else %}
+						<a href="{% url 'mark-book' book.id %}">
 							<img src="{% static 'icons/unmarked.png' %}" alt="">
 						</a>
+						{% endif %}
 						<a href="{% url 'delete-book' book.id %}">
 							<img src="{% static 'icons/remove.png' %}" alt="">
 						</a>
