@@ -28,5 +28,7 @@ urlpatterns = [
     path('delete-book/<id>', delete_book, name="delete-book"),
     path('mark-book/<id>', mark_book, name="mark-book"),
     path('unmark-book/<id>', unmark_book, name="unmark-book"),
+    path('book-detailes-page/', book_detailes_page, name="book-detailes-page"),
+    path('book-details/<id>', book_details, name="book-details"),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

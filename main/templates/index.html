@@ -21,6 +21,7 @@
 	</header>
 	<main>
 		<div class="title">Book List</div>
+		<p class="subtitle">Кликните по названию книги, чтобы узнать подробнее о ней</p>
 		<div class="content_block">
 			{% for book in book_list %}
 			<div class="item
@@ -29,7 +30,10 @@
 				{% endif %}
 			">
 				<div class="text">
-					<div class="book_title">{{ book.title }}</div>
+					<a href="{% url 'book-details' book.id %}" class="book_title" title="Подробнее о книге">
+						<div>{{ book.title }}</div>
+					</a>
+					
 					<div class="book_genre">Жанр: {{ book.genre }}</div>
 				</div>
 				<div class="price_icons">
@@ -44,7 +48,7 @@
 							<img src="{% static 'icons/unmarked.png' %}" alt="">
 						</a>
 						{% endif %}
-						<a href="{% url 'delete-book' book.id %}">
+						<a href="{% url 'delete-book' book.id %}" title="Удалить">
 							<img src="{% static 'icons/remove.png' %}" alt="">
 						</a>
 					</div>
@@ -54,7 +58,7 @@
 		</div>
 	</main>
 	<footer>
-		<p>Python Django</p>
+		<p>Работу выполнил Жонбутаев Алибек</p>
 	</footer>
 </body>
 </html>

@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="books_details.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/books_details.css' %}">
 	<title>Books</title>
 </head>
 <body>
@@ -12,8 +13,8 @@
 			<h1>Book Shop</h1>
 			<nav>
 				<ul class="navigation">
-					<li><a href="">Главная</a></li>
-					<li id="add_btn"><a href="">Добавить книгу</a></li>
+					<li><a href="{% url 'main-page' %}">Главная</a></li>
+					<li id="add_btn"><a href="{% url 'add-page' %}">Добавить книгу</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -25,7 +26,7 @@
                 <p>Название:</p>
             </div>
             <div class="description">
-                <p>Гарри Поттер</p>
+                <p>{{ book.title }}</p>
             </div>
         </section>
 
@@ -34,7 +35,7 @@
                 <p>Подзаголовок:</p>
             </div>
             <div class="description">
-                <p>Гарри Поттер</p>
+                <p>{{ book.subtitle }}</p>
             </div>
         </section>
 
@@ -43,7 +44,7 @@
                 <p>Описание:</p>
             </div>
             <div class="description">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maxime a repudiandae quae dolor, perferendis error illum iure modi voluptates laborum aut possimus asperiores culpa quasi dignissimos reiciendis laboriosam molestiae!</p>
+                <p>{{ book.description }}</p>
             </div>
         </section>
 
@@ -52,7 +53,7 @@
                 <p>Цена:</p>
             </div>
             <div class="description">
-                <p> <span class="price">430.00</span> c</p>
+                <p><span class="price">{{ book.price }}</span> c</p>
             </div>
         </section>
 
@@ -61,7 +62,7 @@
                 <p>Жанр:</p>
             </div>
             <div class="description">
-                <p>фантастика</p>
+                <p>{{ book.genre }}</p>
             </div>
         </section>
 
@@ -70,7 +71,7 @@
                 <p>Автор:</p>
             </div>
             <div class="description">
-                <p>Гарри Поттер</p>
+                <p>{{ book.author }}</p>
             </div>
         </section>
 
@@ -79,7 +80,7 @@
                 <p>Год издания:</p>
             </div>
             <div class="description">
-                <p>2009</p>
+                <p>{{ book.year }}</p>
             </div>
         </section>
 
@@ -88,7 +89,7 @@
                 <p>Дата и время добавления:</p>
             </div>
             <div class="description">
-                <p>2009</p>
+                <p>{{ book.date }}</p>
             </div>
         </section>
 	</main>

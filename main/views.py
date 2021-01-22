@@ -42,3 +42,11 @@ def unmark_book(request, id):
     book.is_favorite = False
     book.save()
     return redirect(book_page)
+
+def book_detailes_page(request):
+    return render(request, "books_details.html")
+
+def book_details(request, id):
+    book = Book.objects.get(id=id)
+    return render(request, "books_details.html", {"book" : book})
+    

@@ -46,8 +46,14 @@ main{
 	align-items: center;
 }
 .title{
+	color: #424242;
 	font-size: 48px;
 	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.subtitle{
+	color: #424242;
+	font-size: 20px;
 	margin-bottom: 20px;
 }
 .content_block{
@@ -93,8 +99,9 @@ main{
 }
 .book_title{
 	font-weight: 600;
-	font-size: 20px;
+	font-size: 22px;
 	color: rgb(56, 56, 56);
+	text-decoration: none;
 }
 .book_genre{
 	font-size: 18px;
@@ -115,6 +122,7 @@ footer{
 	margin-top: 40px; 
 }
 footer p{
+	font-size: 22px;
 	color: #fff;
 	text-align: center;
 }
